@@ -1,7 +1,16 @@
 import React from 'react'
+import Sidebar from '../layout/Sidebar'
 
 export default function Proyectos() {
     return (
-        <h1>Proyectos</h1>
+        <div className='contenedor-app'>
+            <Sidebar />
+
+            <div className="seccion-principal">
+                <main>
+                    <div className="contendor-tareas"></div>
+                </main>
+            </div>
+        </div>
     )
 }
