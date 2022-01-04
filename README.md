@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+![logo-tus-proyectos](https://res.cloudinary.com/dhd9jgrw3/image/upload/v1629360773/tus-proyectos/tus-proyectos-titulo_xx9bka.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Backend: 💻](https://github.com/militroncho7/tus-proyectos-servidor): https://github.com/militroncho7/tus-proyectos-servidor
 
-## Available Scripts
+# Adminsitrador de Proyectos 👨🏻‍💻
 
-In the project directory, you can run:
+App web en el que puedes administrar diferentes proyectos e incluir tareas, editarlas, eliminarlas, cambiar el estado de ellas... Perfecto para organizar tus obejtivos del día a día! [tusProyectos 📝](https://tusproyectos.netlify.app/).
 
-### `npm start`
+## Sitio Web
+---
+![Sitio web](https://res.cloudinary.com/dhd9jgrw3/image/upload/v1629360773/tus-proyectos/tus-proyectos-macbook_umicc6.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+App realizada mediante la libería React, Mongo, Express & Node.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Creada con componentes funcionales
+- Manenjando los diferentes estados en el formulario (Hook useState y useContext)
+- Validación de formularios
+- Asignación de IDs únicos
+- Reinicio del formulario cuando lo envía el usuario
+- Mensajes de error 
+- Componentes condicionales
+- Totalmente Responsive:
+---
+![Responsive](https://res.cloudinary.com/dhd9jgrw3/image/upload/v1629360773/tus-proyectos/tus-poyectos-iphone_sfpjpb.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Primeros pasos
+Creando la estructura:
 
-### `npm run build`
+`npx create-react-app`
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Creando componentes Login, Nueva Cuenta & Routing:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Creación de los componentes para poder iniciar sesión o crear una nueva cuenta. también dejamos definido el routing de la app para navegar por las diferentes páginas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Creación de los componentes para poder iniciar sesión o crear una nueva cuenta. también dejamos definido el routing de la app para navegar por las diferentes páginas.
 
-### `npm run eject`
+### Página Proyectos:
+Posteriormente avanzamos con los diferentes elementos de la página de Proyectos, la cual es privada y sólo se podrá acceder a ella si el usuario está logeado. Aquí aparecerán los diferentes proyectos y tareas que el usuario cree.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Tareas:
+La parte más compleja. aquí se encuentran las tareas de cada proyecto.
+En este apartado se puede editar, añadir, cambiar el estado de las tareas o incluso eliminarlas.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Cómo contribuir
+---
+Toda aportación o comentario será recibido de buen gusto, ya que con ellos se podrá ayudar a crecer tanto a la app como a nosotros como desarrolladores.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Cualquier mejora será incluida tras una previa revisión a través de un “pull requests”.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Se requiere un código ordenado y comentado.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Autor
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![VR-Logo](https://res.cloudinary.com/dhd9jgrw3/image/upload/v1610528741/Logos%20VR/logo-vr_cmhmpa.jpg) || [Víctor Ruiz](https://www.linkedin.com/in/victormmorales/)
