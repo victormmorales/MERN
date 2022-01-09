@@ -9,6 +9,6 @@ const proyectoState = props => {
     }
 
     // Dispatch para ejecutar las acciones
-    const [state, dispatch] = useReducer(proyectoReducer, initialState)
+    const [state, dispatch] = useReducer(proyectoReducer, initialState);
 
 }

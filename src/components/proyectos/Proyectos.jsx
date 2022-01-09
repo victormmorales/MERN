@@ -6,7 +6,7 @@ import ListadoTareas from '../tareas/ListadoTareas'
 
 export default function Proyectos() {
     return (
-        <div className='contenedor-app'>
+        <div className="contenedor-app">
             <Sidebar />
 
             <div className="seccion-principal">
@@ -14,10 +14,10 @@ export default function Proyectos() {
 
                 <main>
                     <FormTarea />
-                    <div className="contendor-tareas">
+
+                    <div className="contenedor-tareas">
                         <ListadoTareas />
                     </div>
-                    
                 </main>
             </div>
         </div>
