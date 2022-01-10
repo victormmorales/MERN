@@ -1,8 +1,7 @@
-import {
-  FORMULARIO_PROYECTO,
-  OBTENER_PROYECTOS,
-  AGREGAR_PROYECTO,
-} from "../../types";
+import { FORMULARIO_PROYECTO,
+    OBTENER_PROYECTOS,
+    AGREGAR_PROYECTO
+} from '../../types';
 
 export default (state, action) => {
   switch (action.type) {

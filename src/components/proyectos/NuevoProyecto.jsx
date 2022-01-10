@@ -21,7 +21,7 @@ export default function NuevoProyecto() {
     }
 
     const onSubmitProyecto = e => {
-        e.preventDefauly();
+        e.preventdefault();
 
         //validadr proyecto
         if(nombre === '') {
