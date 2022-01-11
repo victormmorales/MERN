@@ -1,9 +1,9 @@
 :root {
-  --blanco: #ffffff;
-  --gris1: #edf2f6;
-  --gris2: #2f3848;
-  --gris3: #1a202d;
-  --negro: #000000;
+  --blanco: #F2F2F2;
+  --gris1: #e4e4e4;
+  --gris2: #038C5A;
+  --gris3: #025939;
+  --negro: #F29F05;
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
 }
