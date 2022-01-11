@@ -5,7 +5,7 @@ export default function NuevoProyecto() {
 
     //Obtener state del formulario
     const proyectosContext = useContext(proyectoContext);
-    const { formulario, mostrarFormulario, agregarProyecto } = proyectosContext;
+    const { formulario, errorformulario, mostrarFormulario, agregarProyecto, mostrarError } = proyectosContext;
 
     const [ proyecto, guardarProyecto ] = useState({
         nombre: ''
@@ -21,19 +21,22 @@ export default function NuevoProyecto() {
     }
 
     const onSubmitProyecto = e => {
-        e.preventdefault();
+        e.preventDefault();
 
-        //validadr proyecto
+        // Validar el proyecto
         if(nombre === '') {
+            mostrarError();
             return;
-        };
+        }
 
-        //Agragar al state
+        // agregar al state
         agregarProyecto(proyecto)
 
-        //reiniciar form
+        // Reiniciar el form
+        guardarProyecto({
+            nombre: ''
+        })
     }
-
     //Mostrar formulario
     const onClickFormulario = () => {
         mostrarFormulario();
@@ -65,6 +68,8 @@ export default function NuevoProyecto() {
                 />
             </form>
             ) : null }
+
+            { errorformulario ? <p className='mensaje error'>El nombre es obligatorio</p> : null}
         </>
     )
 }
