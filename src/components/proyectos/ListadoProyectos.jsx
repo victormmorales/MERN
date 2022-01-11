@@ -11,10 +11,11 @@ export default function Listado() {
     //Obtener proyectos cuando cargue el componente
     useEffect(() => {
         obtenerProyectos();
+        // eslint-disable-next-line
     }, [])
 
     //Revisar si proyectos tiene contenido
-    if(proyectos.length === 0) return null;
+    if(proyectos.length === 0) return <p>Por el momento... 😈</p>;
 
     return (
         <ul className='listado-proyectos'>

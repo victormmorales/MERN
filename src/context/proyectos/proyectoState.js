@@ -73,6 +73,14 @@ const ProyectoState = props => {
         })
     };
 
+    //eliminar proyecto
+    const eliminarProyecto = proyectoId => {
+        dispatch({
+            type: ELIMINAR_PROYECTO,
+            payload: proyectoId
+        })
+    }
+
     return (
         <proyectoContext.Provider
             value={{
@@ -84,7 +92,8 @@ const ProyectoState = props => {
                 obtenerProyectos,
                 agregarProyecto,
                 mostrarError,
-                proyectoActual
+                proyectoActual,
+                eliminarProyecto
                 }}
             >
             { props.children }

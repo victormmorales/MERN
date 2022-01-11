@@ -6,7 +6,7 @@ export default function ListadoTareas() {
 
     //Extraer si un proyecto está activo
     const proyectosContext = useContext(proyectoContext);
-    const { proyecto } = proyectosContext;
+    const { proyecto, eliminarProyecto } = proyectosContext;
 
     //Si no hya proyecto selecionado
     if(!proyecto) return <h2>Selecciona un Proyecto</h2>;
@@ -20,6 +20,10 @@ export default function ListadoTareas() {
         {nombre: 'plataforma de pago', estado: true},
         {nombre: 'Serviodres', estado: false}
     ]
+
+    const onClickEliminar = () => {
+        eliminarProyecto(proyectoActual.id);
+    }
 
     return (
         <>
@@ -37,6 +41,7 @@ export default function ListadoTareas() {
             <button
                 type='button'
                 className='btn btn-eliminar'
+                onClick={onClickEliminar}
             >Eliminar Proyecto &times;</button>
         </>
     )
