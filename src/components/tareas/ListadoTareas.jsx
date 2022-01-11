@@ -1,7 +1,18 @@
-import React from 'react'
-import Tarea from './Tarea'
+import React, { useContext } from 'react'
+import Tarea from './Tarea';
+import proyectoContext from '../../context/proyectos/proyectoContext';
 
 export default function ListadoTareas() {
+
+    //Extraer si un proyecto está activo
+    const proyectosContext = useContext(proyectoContext);
+    const { proyecto } = proyectosContext;
+
+    //Si no hya proyecto selecionado
+    if(!proyecto) return <h2>Selecciona un Proyecto</h2>;
+
+    //Extraer proyecto
+    const [ proyectoActual ] = proyecto;
 
     const tareasProyecto = [
         {nombre: 'Elegir colores', estado: true},
@@ -12,7 +23,7 @@ export default function ListadoTareas() {
 
     return (
         <>
-            <h2>Proyecto: Tienda Virtual</h2>
+            <h2>Proyecto: {proyectoActual.nombre}</h2>
             
             <ul className='listado-tareas'>
                 { tareasProyecto.length === 0
