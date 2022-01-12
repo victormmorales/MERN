@@ -30,7 +30,8 @@ const TareaState = props => {
             {id: 13, nombre: 'plataforma de pago', estado: true, proyectoId: 3}
         ],
         tareasproyecto: null,
-        errortarea: false
+        errortarea: false,
+        tareaseleccionada: null
     }
 
     //crear dispatch y state
@@ -77,17 +78,27 @@ const TareaState = props => {
         })
     }
 
+    //extrae la tarea para la edicion
+    const guardarTareaActual = tarea => {
+        dispatch({
+            type: TAREA_ACTUAL,
+            payload: tarea
+        })
+    }
+
     return (
         <TareaContext.Provider
         value={{
             tareas: state.tareas,
             tareasproyecto: state.tareasproyecto,
             errortarea: state.errortarea,
+            tareaseleccionada: state.tareaseleccionada,
             obtenerTareas,
             agregarTarea,
             validarTarea,
             eliminarTarea,
-            cambiarEstadoTarea
+            cambiarEstadoTarea,
+            guardarTareaActual
         }}>
             {props.children}
         </TareaContext.Provider>
