@@ -10,7 +10,7 @@ export default function FormTarea() {
 
     //Obtener las funciones y state del context
     const tareasContext = useContext(tareaContext);
-    const { agregarTarea } = tareasContext
+    const { errortarea, agregarTarea, validarTarea, obtenerTareas } = tareasContext
 
     //state form
     const [ tarea, guardarTarea ] = useState({
@@ -38,15 +38,23 @@ export default function FormTarea() {
         e.preventDefault();
 
         //validar
-
-        //pasar validacion
+        if(nombre.trim() === ''  ) {
+            validarTarea();
+            return;
+        }
 
         //agregar nueva tarea
         tarea.proyectoId = proyectoActual.id;
         tarea.estado = false;
         agregarTarea(tarea);
 
+        //obtener y filtrar tareas del proyecto
+        obtenerTareas(proyectoActual.id);
+
         //reiniciar formulario
+        guardarTarea({
+            nombre: ''
+        })
     }
 
     return (
@@ -73,6 +81,7 @@ export default function FormTarea() {
                     />
                 </div>
             </form>
+            { errortarea ? <p className='mensaje error'>El nombre de la tarea es obligatorio</p> : null}
         </div>
     )
 }

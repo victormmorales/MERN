@@ -28,7 +28,8 @@ const TareaState = props => {
             {nombre: 'Elegir tema', estado: false , proyectoId: 4},
             {nombre: 'plataforma de pago', estado: true, proyectoId: 3}
         ],
-        tareasproyecto: null
+        tareasproyecto: null,
+        errortarea: false
     }
 
     //crear dispatch y state
@@ -52,13 +53,22 @@ const TareaState = props => {
         })
     }
 
+    //valida y muestra un error
+    const validarTarea = () => {
+        dispatch({
+            type: VALIDAR_TAREA
+        })
+    }
+
     return (
         <TareaContext.Provider
         value={{
             tareas: state.tareas,
             tareasproyecto: state.tareasproyecto,
+            errortarea: state.errortarea,
             obtenerTareas,
-            agregarTarea
+            agregarTarea,
+            validarTarea
         }}>
             {props.children}
         </TareaContext.Provider>
