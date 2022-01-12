@@ -14,19 +14,19 @@ import {
 const TareaState = props => {
     const initialState = {
         tareas: [
-            {nombre: 'Elegir colores', estado: true, proyectoId: 1},
-            {nombre: 'Elegir tema', estado: false , proyectoId: 2},
-            {nombre: 'plataforma de pago', estado: true, proyectoId: 3},
-            {nombre: 'Serviodres', estado: false, proyectoId: 4},
-            {nombre: 'Elegir colores', estado: true, proyectoId: 1},
-            {nombre: 'Elegir tema', estado: false , proyectoId: 2},
-            {nombre: 'plataforma de pago', estado: true, proyectoId: 3},
-            {nombre: 'Elegir colores', estado: true, proyectoId: 4},
-            {nombre: 'Elegir tema', estado: false , proyectoId: 1},
-            {nombre: 'plataforma de pago', estado: true, proyectoId: 2},
-            {nombre: 'Elegir colores', estado: true, proyectoId: 3},
-            {nombre: 'Elegir tema', estado: false , proyectoId: 4},
-            {nombre: 'plataforma de pago', estado: true, proyectoId: 3}
+            {id: 1, nombre: 'Elegir colores', estado: true, proyectoId: 1},
+            {id: 2, nombre: 'Elegir tema', estado: false , proyectoId: 2},
+            {id: 3, nombre: 'plataforma de pago', estado: true, proyectoId: 3},
+            {id: 4, nombre: 'Serviodres', estado: false, proyectoId: 4},
+            {id: 5, nombre: 'Elegir colores', estado: true, proyectoId: 1},
+            {id: 6, nombre: 'Elegir tema', estado: false , proyectoId: 2},
+            {id: 7, nombre: 'plataforma de pago', estado: true, proyectoId: 3},
+            {id: 8, nombre: 'Elegir colores', estado: true, proyectoId: 4},
+            {id: 9, nombre: 'Elegir tema', estado: false , proyectoId: 1},
+            {id: 10, nombre: 'plataforma de pago', estado: true, proyectoId: 2},
+            {id: 11, nombre: 'Elegir colores', estado: true, proyectoId: 3},
+            {id: 12, nombre: 'Elegir tema', estado: false , proyectoId: 4},
+            {id: 13, nombre: 'plataforma de pago', estado: true, proyectoId: 3}
         ],
         tareasproyecto: null,
         errortarea: false
@@ -60,6 +60,14 @@ const TareaState = props => {
         })
     }
 
+    //Eliminar tarea x id
+    const eliminarTarea = id => {
+        dispatch({
+            type: ELIMINAR_TAREA,
+            payload: id
+        })
+    }
+
     return (
         <TareaContext.Provider
         value={{
@@ -68,7 +76,8 @@ const TareaState = props => {
             errortarea: state.errortarea,
             obtenerTareas,
             agregarTarea,
-            validarTarea
+            validarTarea,
+            eliminarTarea
         }}>
             {props.children}
         </TareaContext.Provider>
