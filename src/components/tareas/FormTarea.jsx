@@ -46,7 +46,7 @@ export default function FormTarea() {
         tarea.estado = false;
         agregarTarea(tarea);
 
-        //reiniciar form
+        //reiniciar formulario
     }
 
     return (
