@@ -10,7 +10,7 @@ export default function FormTarea() {
 
     //Obtener las funciones y state del context
     const tareasContext = useContext(tareaContext);
-    const { tareaseleccionada, errortarea, agregarTarea, validarTarea, obtenerTareas, actualizarTarea } = tareasContext
+    const { tareaseleccionada, errortarea, agregarTarea, validarTarea, obtenerTareas, actualizarTarea, limpiarTarea } = tareasContext
 
     //effect que detecta si hay una tarea seleccionada
     useEffect(() => {
@@ -63,6 +63,9 @@ export default function FormTarea() {
         } else {
             //actualizar tarea existente
             actualizarTarea(tarea);
+
+            //elimina la tarea seleccionada del state
+            limpiarTarea();
         }
 
         //obtener y filtrar tareas del proyecto

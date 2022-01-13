@@ -44,6 +44,11 @@ export default (state, action) => {
                 ...state,
                 tareaseleccionada: action.payload
             }
+        case LIMPIAR_TAREA:
+            return{
+                ...state,
+                tareaseleccionada: null
+            }
 
         default:
             return state;
